@@ -1,0 +1,255 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-image: url("/keuangan_sederhana/img/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background: (rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url("/keuangan_sederhana/img/bg.jpg") center/cover no-repeat fixed;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  padding: 0 30px;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(6px);
+  padding: 14px 0;
+  z-index: 999;
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.menu {
+  display: flex;
+  gap: 12px;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+.menu a:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.menu a.active {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* =========================
+   HERO
+========================= */
+.hero {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  padding-top: 80px;
+  background: transparent
+      linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url("../img/bg.jpg") center/cover no-repeat;
+}
+
+.hero-inner h1 {
+  margin: 0 0 10px;
+  font-size: 44px;
+  color: #fff;
+}
+
+.hero-inner p {
+  margin: 0;
+  font-size: 18px;
+  opacity: 0.9;
+  color: #fff;
+}
+
+/* Judul halaman */
+h2 {
+  text-align: center;
+  color: #000000;
+  margin: 0 0 18px;
+}
+
+/* =========================
+   TABLE
+========================= */
+.table-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  background: transparent;
+}
+
+table {
+  width: 85%;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.95);
+  margin: 0 auto;
+}
+.alert {
+  width: 85%;
+  margin: 12px auto 0;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  display: inline-block; /* bikin selebar isi */
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-weight: 600;
+  margin: 10px 0 16px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.alert.success {
+  background: rgba(255, 255, 255, 0.12);
+  color: #062a0f;
+}
+
+.alert.danger {
+  background: rgba(255, 0, 0, 0.12);
+  color: #7a0a0a;
+}
+
+th {
+  background: #02363c;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+tr:nth-child(even) {
+  background: #f2f2f2;
+}
+
+tr:hover {
+  background: #e0f4f7;
+}
+
+/* Link umum */
+a {
+  text-decoration: none;
+}
+
+/* =========================
+   FORM
+========================= */
+.form-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+form {
+  width: 480px;
+  background: #fff;
+  padding: 20px 25px;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+button {
+  padding: 10px 18px;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 600px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .nav-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .menu {
+    flex-wrap: wrap;
+  }
+
+  .hero-inner h1 {
+    font-size: 32px;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  form {
+    width: 100%;
+  }
+}
+.footer {
+  padding: 18px 0;
+  text-align: center;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(6px);
+  margin-top: 30px;
+}
+
+.footer p {
+  margin: 0;
+  opacity: 0.9;
+  font-weight: 600;
+}
+main {
+  padding-top: 80px;
+  flex: 1;
+}
